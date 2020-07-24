@@ -66,3 +66,9 @@ btn.addEventListener("click",() => {
     .then(res => res.json())
     .then(console.log)
 })
+
+const logOutBtn = qs("button#logOut")
+// LogOut
+logOutBtn.addEventListener("click", () => {
+    localStorage.clear()
+})
