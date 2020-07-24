@@ -2,11 +2,8 @@ function qs(selector){
     return document.querySelector(selector)
 }
 
-const signUpForm = qs("form#signUp")
-const login = qs("form#login")
-const btn = qs("button#getPaintings")
-
 // Sign up
+const signUpForm = qs("form#signUp")
 signUpForm.addEventListener("submit",() => {
     
     event.preventDefault()
@@ -31,6 +28,7 @@ signUpForm.addEventListener("submit",() => {
     })
 })
 
+const login = qs("form#login")
 // Login
 login.addEventListener("submit",() => {
     event.preventDefault()
@@ -55,6 +53,7 @@ login.addEventListener("submit",() => {
     })
 })
 
+const btn = qs("button#getPaintings")
 // authorization to get paintings
 btn.addEventListener("click",() => {
     fetch("http://localhost:3000/api/v1/paintings",
